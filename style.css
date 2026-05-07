@@ -209,3 +209,11 @@ section {
     display: flex;
     padding: 1.25rem;
 }
+
+
+/* footer */
+
+footer {
+    padding: 5rem 1.25rem;
+    grid-area: contact;
+}
