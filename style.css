@@ -24,6 +24,14 @@ h2 {
     font-weight: normal;
 }
 
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
 body {
     font-family: 'Playfair-Display', 'Roboto', sans-serif;
 }
@@ -59,7 +67,8 @@ section {
 
 .icons img,
 .project-icons img,
-.contact-details img {
+.contact-details img,
+.email-details img {
     width: 2rem;
     height: 2rem;
 }
@@ -217,4 +226,57 @@ section {
 footer {
     padding: 5rem 1.25rem;
     grid-area: contact;
+    color: white;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "content image";
+}
+
+.footer-content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.contact-details,
+.email-details {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-heading {
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: 'Playfair Display';
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: 'Roboto';
+    line-height: 1.4;
+}
+
+.footer-content>.icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-image {
+    grid-area: image;
+}
+
+.footer-image img {
+    width: 100%;
+    height: auto;
+    border-left: 0.3125rem solid #1f8aa0;
 }
