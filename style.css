@@ -133,6 +133,10 @@ section {
     padding-bottom: 1.25rem;
 }
 
+.main-heading {
+    font-family: 'Playfair Display';
+}
+
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
