@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 @font-face {
@@ -33,7 +33,7 @@ h2 {
 }
 
 body {
-    font-family: 'Playfair-Display', 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -238,6 +238,7 @@ footer {
 .footer-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     grid-template-areas: "content image";
 }
 
@@ -277,10 +278,95 @@ footer {
 
 .footer-image {
     grid-area: image;
+    place-self: center;
 }
 
 .footer-image img {
     width: 100%;
     height: auto;
     border-left: 0.3125rem solid #1f8aa0;
+}
+
+/* ---------------- media queries ---------------- */
+
+/* for tablets */
+@media (min-width: 600px) and (max-width: 999px) {
+
+    html {
+        font-size: 16px;
+    }
+
+    section,
+    footer {
+        padding: 4rem 1.5rem;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        grid-template-areas: "image" "content";
+    }
+
+    .pfp-img {
+        transform: scale(1);
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.875rem;
+        grid-template-areas: "card-1 card-2" "card-3 card-4" "card-5 card-6" "card-7 card-8" "card-9 card-9";
+    }
+
+    .footer-container {
+        gap: 1rem;
+    }
+
+}
+
+/* for mobile */
+
+@media (max-width: 599px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    section,
+    footer {
+        padding: 3rem 1rem;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        grid-template-areas: "image" "content";
+    }
+
+    .pfp-img {
+        transform: scale(1);
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.875rem;
+        grid-template-areas: "card-1" "card-2" "card-3" "card-4" "card-5" "card-6" "card-7" "card-8" "card-9";
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "content" "image";
+    }
+
+    .footer-content {
+        align-items: center;
+    }
+
+    .footer-text {
+        text-align: center;
+    }
+
+    .footer-image img {
+        border-left: none;
+    }
+
 }
